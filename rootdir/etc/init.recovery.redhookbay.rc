@@ -1,9 +1,5 @@
 # REDHOOKBAY specific rules for recovery os
 on early-init
-    insmod /lib/modules/pnwdisp.ko
-    insmod /lib/modules/pvrsgx.ko
-    insmod /lib/modules/texfat.ko
-    insmod /lib/modules/tntfs.ko
     chmod 0600 /dev/dri/controlD64
     start thermald
     chmod 0770 /upi_ug31xx
@@ -21,7 +17,6 @@ on init
     mount ext4 /dev/block/by-name/factory /factory nosuid nodev noatime barrier=1,data=ordered
 
 on boot
-    insmod /lib/modules/rmi4.ko boot_mode=1
     setprop sys.usb.config adb
     trigger firmware_mounts_complete
 
