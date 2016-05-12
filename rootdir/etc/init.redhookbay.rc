@@ -636,7 +636,7 @@ service upi_ug31xx /system/bin/upi_ug31xx
     class core
     user system
     group system
-    seclabel u:r:gauge:s0
+    #seclabel u:r:gauge:s0
 
 service dpst /system/bin/dpstmgr
     class main
