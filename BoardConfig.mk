@@ -24,6 +24,12 @@ TARGET_BOARD_PLATFORM := clovertrail
 TARGET_BOOTLOADER_BOARD_NAME := clovertrail
 TARGET_CPU_VARIANT := x86
 
+# Inline kernel building
+TARGET_KERNEL_SOURCE := kernel/asus/T00F
+TARGET_KERNEL_ARCH := x86
+BOARD_KERNEL_IMAGE_NAME := bzImage
+TARGET_KERNEL_CONFIG := cyanogenmod_T00F_defconfig
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := x86_64-linux-android-
 
 # Use the non-open-source parts, if they're present
 -include vendor/asus/T00F/BoardConfigVendor.mk
