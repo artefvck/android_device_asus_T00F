@@ -34,5 +34,8 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := x86_64-linux-android-
 # rootdir
 TARGET_PROVIDES_INIT_RC := false
 
+# Adb
+BOARD_FUNCTIONFS_HAS_SS_COUNT := true
+
 # Use the non-open-source parts, if they're present
 -include vendor/asus/T00F/BoardConfigVendor.mk
