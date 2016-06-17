@@ -71,4 +71,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
        system/core/rootdir/init.rc:root/init.aosp.rc
 
+# media
+PRODUCT_COPY_FILES += \
+    device/asus/T00F/media/media_codecs.xml:system/etc/media_codecs.xml \
+    device/asus/T00F/media/media_profiles.xml:system/etc/media_profiles.xml \
+    device/asus/T00F/media/wrs_omxil_components.list:system/etc/wrs_omxil_components.list \
+    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
+
 $(call inherit-product-if-exists, vendor/asus/T00F/device-vendor.mk)
