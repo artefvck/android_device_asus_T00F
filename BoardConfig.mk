@@ -37,5 +37,8 @@ TARGET_PROVIDES_INIT_RC := false
 # Adb
 BOARD_FUNCTIONFS_HAS_SS_COUNT := true
 
+# Init
+TARGET_IGNORE_RO_BOOT_SERIALNO := true
+
 # Use the non-open-source parts, if they're present
 -include vendor/asus/T00F/BoardConfigVendor.mk
