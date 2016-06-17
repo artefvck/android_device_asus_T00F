@@ -40,5 +40,18 @@ BOARD_FUNCTIONFS_HAS_SS_COUNT := true
 # Init
 TARGET_IGNORE_RO_BOOT_SERIALNO := true
 
+# Opengles
+COMMON_GLOBAL_CFLAGS += -DWORKAROUND_BUG_10194508
+BOARD_EGL_CFG := device/asus/T00F/configs/egl.cfg
+
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.opengles.version = 131072
+
+# enabled to carry out all drawing operations performed on a View's canvas with GPU for 2D rendering pipeline.
+USE_OPENGL_RENDERER := true
+
+# Disable an optimization that causes rendering issues for us
+TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true
+
 # Use the non-open-source parts, if they're present
 -include vendor/asus/T00F/BoardConfigVendor.mk
