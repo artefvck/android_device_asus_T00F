@@ -31,6 +31,11 @@ BOARD_KERNEL_IMAGE_NAME := bzImage
 TARGET_KERNEL_CONFIG := cyanogenmod_T00F_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := x86_64-linux-android-
 
+# OTA Packaging / Bootimg creation
+BOARD_CUSTOM_BOOTIMG := true
+BOARD_CUSTOM_MKBOOTIMG := pack_intel
+BOARD_CUSTOM_BOOTIMG_MK := device/asus/T00F/mkbootimg.mk
+
 # rootdir
 TARGET_PROVIDES_INIT_RC := false
 
