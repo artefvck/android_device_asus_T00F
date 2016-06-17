@@ -85,4 +85,16 @@ PRODUCT_COPY_FILES += \
     device/asus/T00F/audio/audio_policy.conf:system/etc/audio_policy.conf \
     device/asus/T00F/audio/route_criteria.conf:system/etc/route_criteria.conf
 
+# Wifi
+PRODUCT_PACKAGES += \
+    libwpa_client \
+    lib_driver_cmd_bcmdhd \
+    hostapd \
+    dhcpcd.conf \
+    wpa_supplicant \
+    wpa_supplicant.conf
+
+PRODUCT_COPY_FILES += \
+    device/asus/T00F/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
+
 $(call inherit-product-if-exists, vendor/asus/T00F/device-vendor.mk)
