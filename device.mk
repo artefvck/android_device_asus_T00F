@@ -79,4 +79,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
+# audio
+PRODUCT_COPY_FILES += \
+    device/asus/T00F/audio/asound.conf:system/etc/asound.conf \
+    device/asus/T00F/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    device/asus/T00F/audio/route_criteria.conf:system/etc/route_criteria.conf
+
 $(call inherit-product-if-exists, vendor/asus/T00F/device-vendor.mk)
