@@ -35,6 +35,7 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := x86_64-linux-android-
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_MKBOOTIMG := pack_intel
 BOARD_CUSTOM_BOOTIMG_MK := device/asus/T00F/mkbootimg.mk
+NEED_KERNEL_MODULE_ROOT := true
 
 # rootdir
 TARGET_PROVIDES_INIT_RC := false
