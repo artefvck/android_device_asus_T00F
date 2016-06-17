@@ -24,6 +24,10 @@ TARGET_BOARD_PLATFORM := clovertrail
 TARGET_BOOTLOADER_BOARD_NAME := clovertrail
 TARGET_CPU_VARIANT := x86
 
+# Specific headers
+TARGET_BOARD_KERNEL_HEADERS := device/asus/T00F/kernel-headers
+TARGET_SPECIFIC_HEADER_PATH := device/asus/T00F/include
+
 # Inline kernel building
 TARGET_KERNEL_SOURCE := kernel/asus/T00F
 TARGET_KERNEL_ARCH := x86
