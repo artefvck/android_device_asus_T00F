@@ -14,9 +14,20 @@
 # limitations under the License.
 #
 
+# call dalvik heap config
+$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
+
+# call hwui memory config
+$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
+
 #overlay
 DEVICE_PACKAGE_OVERLAYS := \
     device/asus/T00F/overlay
+
+# Dalvik
+PRODUCT_PROPERTY_OVERRIDES +=  \
+    ro.dalvik.vm.isa.arm=x86 \
+    dalvik.vm.implicit_checks=none
 
 # Ramdisk
 PRODUCT_PACKAGES += \
