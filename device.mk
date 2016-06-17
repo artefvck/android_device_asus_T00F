@@ -53,4 +53,8 @@ PRODUCT_PACKAGES += \
        intel_prop \
        thermald
 
+# rootdir
+PRODUCT_COPY_FILES += \
+       system/core/rootdir/init.rc:root/init.aosp.rc
+
 $(call inherit-product-if-exists, vendor/asus/T00F/device-vendor.mk)

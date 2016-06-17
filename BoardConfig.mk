@@ -31,5 +31,8 @@ BOARD_KERNEL_IMAGE_NAME := bzImage
 TARGET_KERNEL_CONFIG := cyanogenmod_T00F_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := x86_64-linux-android-
 
+# rootdir
+TARGET_PROVIDES_INIT_RC := false
+
 # Use the non-open-source parts, if they're present
 -include vendor/asus/T00F/BoardConfigVendor.mk
