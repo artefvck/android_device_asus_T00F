@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+#overlay
+DEVICE_PACKAGE_OVERLAYS := \
+    device/asus/T00F/overlay
 
 # Ramdisk
 PRODUCT_PACKAGES += \
