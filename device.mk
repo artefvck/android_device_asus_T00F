@@ -14,4 +14,43 @@
 # limitations under the License.
 #
 
+
+# Ramdisk
+PRODUCT_PACKAGES += \
+       config_init.sh \
+       fstab \
+       fstab.charger.redhookbay \
+       fstab.ramconsole.redhookbay \
+       fstab.redhookbay \
+       fstab.zram \
+       init.a500cg.usb.rc \
+       init.a600cg.usb.rc \
+       init.avc.rc \
+       init.bt.rc \
+       init.bt.vendor.rc \
+       init.class_main.sh \
+       init.common.rc \
+       init.compass.rc \
+       init.config_init.rc \
+       init.debug.rc \
+       init.diag.rc \
+       init.firmware.rc \
+       init.gps.rc \
+       init.ksm.rc \
+       init.logtool.rc \
+       init.modem.rc \
+       init.rc \
+       init.recovery.redhookbay.rc \
+       init.redhookbay.rc \
+       init.watchdog.rc \
+       init.wifi.rc \
+       init.wifi.vendor.rc \
+       init.wireless.rc \
+       init.zram.rc \
+       intel_prop.cfg \
+       rfkill_bt.sh \
+       ueventd.redhookbay.rc \
+       intel_prop \
+       thermald
+
 $(call inherit-product-if-exists, vendor/asus/T00F/device-vendor.mk)
