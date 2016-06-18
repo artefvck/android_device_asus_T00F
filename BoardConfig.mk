@@ -45,6 +45,10 @@ BOARD_CUSTOM_MKBOOTIMG := pack_intel
 BOARD_CUSTOM_BOOTIMG_MK := device/asus/T00F/mkbootimg.mk
 NEED_KERNEL_MODULE_ROOT := true
 
+# Bluetooth
+BOARD_HAVE_BLUETOOTH := true
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/asus/T00F/bluetooth
+
 # rootdir
 TARGET_PROVIDES_INIT_RC := true
 
