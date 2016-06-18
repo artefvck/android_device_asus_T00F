@@ -29,6 +29,10 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     ro.dalvik.vm.isa.arm=x86 \
     dalvik.vm.implicit_checks=none
 
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.spid.gps.tty=ttyMFD3
+
 # Ramdisk
 PRODUCT_PACKAGES += \
        config_init.sh \
@@ -96,5 +100,24 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     device/asus/T00F/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
+
+# gps
+PRODUCT_COPY_FILES += \
+    device/asus/T00F/configs/gps.conf:system/etc/gps.conf \
+    device/asus/T00F/configs/gpsconfig_HULA.xml:system/etc/gpsconfig_HULA.xml \
+    device/asus/T00F/configs/gpsconfig_NoHULA.xml:system/etc/gpsconfig_NoHULA.xml \
+    device/asus/T00F/configs/libgps.conf:system/etc/libgps.conf
+
+PRODUCT_COPY_FILES += \
+    device/asus/T00F/configs/sensor_hal_config_default.xml:system/etc/sensor_hal_config_default.xml \
+    device/asus/T00F/configs/sensor_hal_config_general_default.xml:system/etc/sensor_hal_config_general_default.xml \
+    device/asus/T00F/configs/sensor_hal_config_general_scale-pr1.xml:system/etc/sensor_hal_config_general_scale-pr1.xml \
+    device/asus/T00F/configs/sensor_hal_config_scale-pr1.xml:system/etc/sensor_hal_config_scale-pr1.xml \
+    device/asus/T00F/configs/thermal_sensor_config.xml:system/etc/thermal_sensor_config.xml \
+    device/asus/T00F/configs/thermal_sensor_config_a500cg.xml:system/etc/thermal_sensor_config_a500cg.xml \
+    device/asus/T00F/configs/thermal_sensor_config_a600cg.xml:system/etc/thermal_sensor_config_a600cg.xml \
+    device/asus/T00F/configs/thermal_throttle_config.xml:system/etc/thermal_throttle_config.xml \
+    device/asus/T00F/configs/thermal_throttle_config_a500cg.xml:system/etc/thermal_throttle_config_a500cg.xml \
+    device/asus/T00F/configs/thermal_throttle_config_a600cg.xml:system/etc/thermal_throttle_config_a600cg.xml
 
 $(call inherit-product-if-exists, vendor/asus/T00F/device-vendor.mk)
