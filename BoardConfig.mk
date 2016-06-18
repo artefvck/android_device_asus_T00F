@@ -46,7 +46,7 @@ BOARD_CUSTOM_BOOTIMG_MK := device/asus/T00F/mkbootimg.mk
 NEED_KERNEL_MODULE_ROOT := true
 
 # rootdir
-TARGET_PROVIDES_INIT_RC := false
+TARGET_PROVIDES_INIT_RC := true
 
 # Adb
 BOARD_FUNCTIONFS_HAS_SS_COUNT := true

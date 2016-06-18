@@ -57,7 +57,6 @@ PRODUCT_PACKAGES += \
        init.ksm.rc \
        init.logtool.rc \
        init.modem.rc \
-       init.rc \
        init.recovery.redhookbay.rc \
        init.redhookbay.rc \
        init.watchdog.rc \
@@ -70,10 +69,6 @@ PRODUCT_PACKAGES += \
        ueventd.redhookbay.rc \
        intel_prop \
        thermald
-
-# rootdir
-PRODUCT_COPY_FILES += \
-       system/core/rootdir/init.rc:root/init.aosp.rc
 
 # media
 PRODUCT_COPY_FILES += \
