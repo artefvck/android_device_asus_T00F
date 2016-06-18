@@ -35,6 +35,9 @@ BOARD_KERNEL_IMAGE_NAME := bzImage
 TARGET_KERNEL_CONFIG := cyanogenmod_T00F_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := x86_64-linux-android-
 
+# Kernel cmdline
+BOARD_KERNEL_CMDLINE := init=/init pci=noearly earlyprintk=nologger loglevel=0 kmemleak=off androidboot.bootmedia=sdcard androidboot.hardware=redhookbay watchdog.watchdog_thresh=60 androidboot.spid=xxxx:xxxx:xxxx:xxxx:xxxx:xxxx androidboot.serialno=01234567890123456789 ip=50.0.0.2:50.0.0.1::255.255.255.0::usb0:on vmalloc=172M slub_max_order=2
+
 # OTA Packaging / Bootimg creation
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_MKBOOTIMG := pack_intel
