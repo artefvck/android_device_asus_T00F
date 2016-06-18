@@ -24,6 +24,9 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui
 DEVICE_PACKAGE_OVERLAYS := \
     device/asus/T00F/overlay
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=320
+
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES +=  \
     ro.dalvik.vm.isa.arm=x86 \
