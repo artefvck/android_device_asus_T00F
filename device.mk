@@ -115,4 +115,14 @@ PRODUCT_COPY_FILES += \
     device/asus/T00F/configs/thermal_throttle_config_a500cg.xml:system/etc/thermal_throttle_config_a500cg.xml \
     device/asus/T00F/configs/thermal_throttle_config_a600cg.xml:system/etc/thermal_throttle_config_a600cg.xml
 
+# Key layout files
+PRODUCT_COPY_FILES += \
+    device/asus/T00F/keylayout/synaptics_dsx.kcm:system/usr/keychars/synaptics_dsx.kcm \
+    device/asus/T00F/keylayout/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl \
+    device/asus/T00F/keylayout/cloverview_audio_Intel_MID_Audio_Jack.kl:system/usr/keylayout/cloverview_audio_Intel_MID_Audio_Jack.kl \
+    device/asus/T00F/keylayout/ASUS_TransKeyboard.kl:system/usr/keylayout/ASUS_TransKeyboard.kl \
+    device/asus/T00F/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    device/asus/T00F/keylayout/Vendor_0b05_Product_17fc.kl:system/usr/keylayout/Vendor_0b05_Product_17fc.kl \
+    device/asus/T00F/keylayout/Vendor_0b05_Product_1803.kl:system/usr/keylayout/Vendor_0b05_Product_1803.kl
+
 $(call inherit-product-if-exists, vendor/asus/T00F/device-vendor.mk)
