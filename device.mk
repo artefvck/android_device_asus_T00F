@@ -150,4 +150,39 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
+# Media: SDK and OMX IL components
+PRODUCT_PACKAGES += \
+    msvdx_bin \
+    topaz_bin
+
+# Media: libva
+PRODUCT_PACKAGES += \
+    libva \
+    libva-android \
+    libva-tpi \
+    vainfo
+
+# Media: libstagefrighthw
+PRODUCT_PACKAGES += \
+    libstagefrighthw
+
+# libmix
+PRODUCT_PACKAGES += \
+    libmixvbp_mpeg4 \
+    libmixvbp_h264 \
+    libmixvbp_h264secure \
+    libmixvbp_vc1 \
+    libva_videodecoder \
+    libva_videoencoder
+
+PRODUCT_PACKAGES += \
+    libwrs_omxil_common \
+    libwrs_omxil_core_pvwrapped \
+    libOMXVideoDecoderH263 \
+    libOMXVideoDecoderMPEG4 \
+    libOMXVideoEncoderAVC \
+    libOMXVideoDecoderWMV \
+    libOMXVideoEncoderH263 \
+    libOMXVideoEncoderMPEG4
+
 $(call inherit-product-if-exists, vendor/asus/T00F/device-vendor.mk)
